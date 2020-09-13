@@ -23,3 +23,9 @@ app.set('view engine', 'handlebars');
 const routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
+
+// Starts the server to begin listening to client requests
+app.listen(PORT, () => {
+    // Log (server-side) when the server has started
+    console.log("Server listening on localhost:" + PORT);
+});
