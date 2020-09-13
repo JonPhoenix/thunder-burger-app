@@ -8,4 +8,10 @@ const burger = {
             cb(res);
         });
     },
+    // The variables cols and vals are arrays.
+    insertOne: (cols, vals, cb) => {
+        orm.create('burgers', cols, vals, res => {
+            cb(res);
+        });
+    },
 };
