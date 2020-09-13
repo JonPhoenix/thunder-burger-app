@@ -7,5 +7,5 @@ VALUES
     ('Three Alarm Burger', false),
 
     ('Breakfast Burger', true),
-    ('Our Signature Bison Burger', true),
+    ('Signature Bison Burger', true),
     ('The Impossible Burger', true);

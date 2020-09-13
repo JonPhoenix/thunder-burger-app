@@ -13,24 +13,21 @@ const printQuestionMarks = num => {
 
 // Helper function to convert object key:value pairs to SQL syntax
 const objToSql = ob => {
-
     let arr = [];
-  
     // Loop through the keys and push the key:value as a string int arr
     for (let key in ob) {
-      let value = ob[key];
-      // Check to skip hidden properties
-      if (Object.hasOwnProperty.call(ob, key)) {
-        // If string with spaces, add quotations (Classic Burger => 'Classic Burger')
-        if (typeof value === "string" && value.indexOf(" ") >= 0) {
-          value = `'${value}'`;
+        let value = ob[key];
+        // Check to skip hidden properties
+        if (Object.hasOwnProperty.call(ob, key)) {
+            // If string with spaces, add quotations (Classic Burger => 'Classic Burger')
+            if (typeof value === "string" && value.indexOf(" ") >= 0) {
+                value = `'${value}'`;
+            }
+            // e.g. {name: 'Classic Burger'} => ["name='Classic Burger'"]
+            // e.g. {devoured: true} => ["devoured=true"]
+            arr.push(`${key} = ${value}`);
         }
-        // e.g. {name: 'Classic Burger'} => ["name='Classic Burger'"]
-        // e.g. {devoured: true} => ["devoured=true"]
-        arr.push(`${key} = ${value}`);
-      }
     }
-
     // Translate array of strings to a single comma-separated string
     return arr.toString();
 }

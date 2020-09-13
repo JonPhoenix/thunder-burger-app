@@ -19,4 +19,4 @@ connection.connect(function(err) {
 });
 
 // Module.export connection to orm.js
-module.export = connection;
+module.exports = connection;
