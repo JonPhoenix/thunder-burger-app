@@ -86,6 +86,20 @@ const orm = {
             cb(result);
         });
     },
+
+    delete: (table, condition, cb) => {
+        let queryString = 'DELETE FROM ' + table;
+        queryString += ' WHERE ';
+        queryString += condition;
+  
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            }
+  
+            cb(result);
+        });
+    }
 };
 
 // Export the orm object for the model.
