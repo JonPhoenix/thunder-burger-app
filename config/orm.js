@@ -46,14 +46,14 @@ const orm = {
     },
 
     create: (table, cols, vals, cb) => {
-        let queryString = 'INSERT INTO ' + table;
+        let queryString = `INSERT INTO ` + table;
     
-        queryString += ' (';
+        queryString += ` (`;
         queryString += cols.toString();
-        queryString += ') ';
-        queryString += 'VALUES (';
+        queryString += `) `;
+        queryString += `VALUES (`;
         queryString += printQuestionMarks(vals.length);
-        queryString += ') ';
+        queryString += `) `;
     
         console.log(queryString);
     
@@ -61,7 +61,6 @@ const orm = {
             if (err) {
                 throw err;
             }
-    
             cb(result);
         });
     },
@@ -79,21 +78,19 @@ const orm = {
             if (err) {
                 throw err;
             }
-
             cb(result);
         });
     },
 
     delete: (table, condition, cb) => {
-        let queryString = 'DELETE FROM ' + table;
-        queryString += ' WHERE ';
+        let queryString = `DELETE FROM ` + table;
+        queryString += ` WHERE `;
         queryString += condition;
   
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
             }
-  
             cb(result);
         });
     }
