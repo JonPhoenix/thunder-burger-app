@@ -1,50 +1,69 @@
-<header>
+<div class="container">
+    <header>
     <h1>Thunder Burger!</h1>
-</header>
+    </header>
 
-    <h3>Burgers ready!</h3>
-        <table>
-            <tbody>
-                {{#each burgers}}
-                    {{#unless devoured}}
-                        <tr>
-                            <td>{{this.id}}</td>
-                            <td>{{this.burger_name}}</td>
-                            <td><button data-id='{{this.id}}'>Devour!</button></td>
-                        </tr>
-                    {{/unless}}
-                {{/each}}
-            </tbody>
-        </table>
-
-    <h3>Burgers Devoured</h3>
-        <table>
-            <tbody>
-                {{#each burgers}}
-                    {{#if devoured}}
-                        <tr>
-                            <td>{{this.id}}</td>
-                            <td>{{this.burger_name}}</td>
-                            <td><button 
-                            type='button' 
-                            class='alert button delete' 
-                            data-id='{{this.id}}'
-                            >Delete</button></td>
-                        </tr>
-                    {{/if}}
-                {{/each}}
-            </tbody>
-        </table>
-    
-    <h3>Add a Burger</h3>
-        <form class='create-form'>
-
-            <div class='form-group'>
-                <div>
-                    <input class='input-group-field' name='burger_name' type='text'>
-                        <div class='input-group-button'>
-                            <input type='submit' class='alert button' value='Add'>
-                        </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <h3>Burgers ready!</h3>
+                    <table>
+                        <tbody>
+                            {{#each burgers}}
+                                {{#unless devoured}}
+                                <tr>
+                                    <td>{{this.id}}</td>
+                                    <td>{{this.burger_name}}</td>
+                                    <td><button 
+                                    type='button' 
+                                    class='btn btn-dark btn-lg' 
+                                    data-id='{{this.id}}'
+                                    >Devour!</button></td>
+                                </tr>
+                                {{/unless}}
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <h3>Burgers Devoured</h3>
+                    <table>
+                        <tbody>
+                            {{#each burgers}}
+                                {{#if devoured}}
+                                <tr>
+                                    <td>{{this.id}}</td>
+                                    <td>{{this.burger_name}}</td>
+                                    <td><button 
+                                    type='button' 
+                                    class='btn btn-dark btn-lg'
+                                    data-id='{{this.id}}'
+                                    >Delete</button></td>
+                                </tr>
+                                {{/if}}
+                            {{/each}}
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </form>
+
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <h3>Add a Burger</h3>
+                    <form class='create-form'>
+                        <div class='form-group'>
+                            <div>
+                                <input class='input-group-field' name='burger_name' type='text'>
+                                <div class='input-group-button'>
+                                    <input type='submit' class='alert button' value='Add'>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   
