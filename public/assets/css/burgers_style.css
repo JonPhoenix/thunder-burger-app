@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffdc89;
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: firebrick;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: xx-large;
+    color: firebrick;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    padding: 80px 40px;
+    background-color: #ffe19a;
+}
+
+.column-container {
+    /* background-color: #FA9632; */
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 90px;
+    width: auto;
+}
+
+.btn-details {
+    width: 125px;
+    margin: 10px;
+    border: none;
+    margin-left: 30px;
+    background-color: firebrick;
+}
+
+.form {
+    text-align: center;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.add {
+    color: darkgreen;
+}
+
+.btn-order {
+    width: 200px;
+    background-color: darkgreen;
+    border: none;
+}
+
+.input-group-field {
+    margin: 15px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+}
