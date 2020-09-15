@@ -5,9 +5,8 @@
 
     <div class="card">
             <div class="row">
-                {{!-- <div class="col-md-6 column-container"> --}}
-                    <div class="card col-md-6">
-                    <h3>burgers ready!:</h3>
+                <div class="card col-md-6">
+                    <h3>burgers ready:</h3>
                     <table>
                         <tbody>
                             {{#each burgers}}
@@ -17,7 +16,7 @@
                                     <td>{{this.burger_name}}</td>
                                     <td><button 
                                     type='button' 
-                                    class='btn btn-success btn-md btn-details' 
+                                    class='btn btn-success btn-md btn-devour' 
                                     data-id='{{this.id}}'
                                     >Devour</button></td>
                                 </tr>
@@ -25,10 +24,9 @@
                             {{/each}}
                         </tbody>
                     </table>
-                    </div>
-                {{!-- </div> --}}
-                {{!-- <div class="col-md-6 column-container"> --}}
-                    <div class="card col-md-6">
+                </div>
+
+                <div class="card col-md-6">
                     <h3>burgers devoured:</h3>
                     <table>
                         <tbody>
@@ -39,7 +37,7 @@
                                     <td>{{this.burger_name}}</td>
                                     <td><button 
                                     type='button' 
-                                    class='btn btn-dark btn-md btn-details'
+                                    class='btn btn-dark btn-md btn-remove'
                                     data-id='{{this.id}}'
                                     >Remove</button></td>
                                 </tr>
@@ -47,8 +45,7 @@
                             {{/each}}
                         </tbody>
                     </table>
-                    </div>
-                {{!-- </div> --}}
+                </div>
             </div>
 
     </div>
@@ -60,7 +57,8 @@
                         <div class='form-group'>
                             <div>
                                 <input 
-                                class="input-group-field" 
+                                class='input-group-field' 
+                                id='burger_name' 
                                 name='burger_name' 
                                 type='text' placeholder='Yum!'>
                                 <div class='input-group-button'>

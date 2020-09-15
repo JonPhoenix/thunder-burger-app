@@ -25,7 +25,7 @@ h3 {
 
 .card {
     border: none;
-    border-radius: 20px;
+    border-radius: 60px;
     padding: 40px 60px;
     background-color: #ffe19a;
 }
@@ -36,10 +36,19 @@ h3 {
     width: auto;
 }
 
-.btn-details {
+.btn-devour {
     margin: 10px;
     border: none;
     margin-left: 10px;
+    border-radius: 10px;
+    background-color: firebrick;
+}
+
+.btn-remove {
+    margin: 10px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 10px;
     background-color: firebrick;
 }
 
@@ -55,8 +64,9 @@ h3 {
 
 .btn-order {
     width: 200px;
-    background-color: darkgreen;
     border: none;
+    border-radius: 15px;
+    background-color: darkgreen;
 }
 
 .input-group-field {
@@ -65,5 +75,5 @@ h3 {
     height: 50px;
     border: none;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 15px;
 }
