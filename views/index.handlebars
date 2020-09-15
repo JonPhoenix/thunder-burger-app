@@ -1,12 +1,13 @@
 <div class="container">
     <header>
-    <h1 class="add">Thunder Burger !</h1>
+    <h1 class="add" id="logo-name">Thunder Burger</h1>
     </header>
 
     <div class="card">
             <div class="row">
-                <div class="col-md-6 column-container">
-                    <h3>burgers ready!</h3>
+                {{!-- <div class="col-md-6 column-container"> --}}
+                    <div class="card col-md-6">
+                    <h3>burgers ready!:</h3>
                     <table>
                         <tbody>
                             {{#each burgers}}
@@ -18,15 +19,17 @@
                                     type='button' 
                                     class='btn btn-success btn-md btn-details' 
                                     data-id='{{this.id}}'
-                                    >Devour !</button></td>
+                                    >Devour</button></td>
                                 </tr>
                                 {{/unless}}
                             {{/each}}
                         </tbody>
                     </table>
-                </div>
-                <div class="col-md-6 column-container">
-                    <h3>burgers devoured</h3>
+                    </div>
+                {{!-- </div> --}}
+                {{!-- <div class="col-md-6 column-container"> --}}
+                    <div class="card col-md-6">
+                    <h3>burgers devoured:</h3>
                     <table>
                         <tbody>
                             {{#each burgers}}
@@ -44,7 +47,8 @@
                             {{/each}}
                         </tbody>
                     </table>
-                </div>
+                    </div>
+                {{!-- </div> --}}
             </div>
 
     </div>
