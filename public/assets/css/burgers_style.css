@@ -23,8 +23,9 @@ body {
     position: relative;
     text-align: center;
     z-index: -1;
-    animation-name: example;
-    animation-duration: 4s;
+    animation-name: logo;
+    animation-duration: 3s;
+    /* animation-play-state: running 3s, paused; */
 }
 
 h3 {
@@ -88,8 +89,7 @@ h3 {
     border-radius: 15px;
 }
 
-@keyframes example {
+@keyframes logo {
     0%   {top:-300px;}
     100% {top:0px;}
-  }
-  
+}
