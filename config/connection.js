@@ -1,13 +1,20 @@
 // Setup MySQL connection 
 const mysql = require('mysql');
 
-let connection = mysql.createConnection({
+let connection;
+
+// Hooking connection with JawsDB MySQL add on from Heroku
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+connection = mysql.createConnection({
     host: 'localhost',
     port: 3306,
     user: 'root',
     password: '',
     database: 'tburgers_db'
   });
+};
 
 // Make connection.
 connection.connect(function(err) {
