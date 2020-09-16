@@ -1,4 +1,4 @@
-// Import express
+// Import express dependency
 const express = require('express');
 
 // Create the router for the app

@@ -2,77 +2,72 @@
     <header>
     <h1 class="add" id="logo">Thunder Burger</h1>
     </header>
-        <div class="burger-image">
-            <img src="/assets/img/burger_logo.png" width="300" alt="Burger-Logo">
+    <div class="burger-image">
+        <img src="/assets/img/burger_logo.png" width="300" alt="Burger-Logo">
+    </div>
+    <div class="row">
+        <div class="card col-md-6">
+            <h3>burgers ready:</h3>
+            <table>
+                <tbody>
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                        <tr>
+                            <td>{{this.id}}</td>
+                            <td>{{this.burger_name}}</td>
+                            <td><button 
+                            type='button' 
+                            class='btn btn-success btn-md btn-devour' 
+                            data-id='{{this.id}}'
+                            >Devour</button></td>
+                            </tr>
+                        {{/unless}}
+                    {{/each}}
+                </tbody>
+            </table>
         </div>
 
-    {{!-- <div class="card"> --}}
-            <div class="row">
-                <div class="card col-md-6">
-                    <h3>burgers ready:</h3>
-                    <table>
-                        <tbody>
-                            {{#each burgers}}
-                                {{#unless devoured}}
-                                <tr>
-                                    <td>{{this.id}}</td>
-                                    <td>{{this.burger_name}}</td>
-                                    <td><button 
-                                    type='button' 
-                                    class='btn btn-success btn-md btn-devour' 
-                                    data-id='{{this.id}}'
-                                    >Devour</button></td>
-                                </tr>
-                                {{/unless}}
-                            {{/each}}
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="card col-md-6">
-                    <h3>burgers devoured:</h3>
-                    <table>
-                        <tbody>
-                            {{#each burgers}}
-                                {{#if devoured}}
-                                <tr>
-                                    <td>{{this.id}}</td>
-                                    <td>{{this.burger_name}}</td>
-                                    <td><button 
-                                    type='button' 
-                                    class='btn btn-dark btn-md btn-remove'
-                                    data-id='{{this.id}}'
-                                    >Remove</button></td>
-                                </tr>
-                                {{/if}}
-                            {{/each}}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
+        <div class="card col-md-6">
+            <h3>burgers devoured:</h3>
+            <table>
+                <tbody>
+                    {{#each burgers}}
+                        {{#if devoured}}
+                        <tr>
+                            <td>{{this.id}}</td>
+                            <td>{{this.burger_name}}</td>
+                            <td><button 
+                            type='button' 
+                            class='btn btn-dark btn-md btn-remove'
+                            data-id='{{this.id}}'
+                            >Remove</button></td>
+                        </tr>
+                        {{/if}}
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
     </div>
-
-            <div class="row justify-content-md-center">
-                <div class="col-md-auto form">
-                    <h3 class="add">add a burger</h3>
-                    <form class='create-form'>
-                        <div class='form-group'>
-                            <div>
-                                <input 
-                                class='input-group-field' 
-                                id='burger_name' 
-                                name='burger_name' 
-                                type='text' placeholder='Yum!'>
-                                <div class='input-group-button'>
-                                    <input type='submit' 
-                                    class='btn btn-dark btn-lg btn-order' 
-                                    value='Order'>
-                                </div>
-                            </div>
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto form">
+            <h3 class="add">add a burger</h3>
+            <form class='create-form'>
+                <div class='form-group'>
+                    <div>
+                        <input 
+                        class='input-group-field' 
+                        id='burger_name' 
+                        name='burger_name' 
+                        type='text' placeholder='Yum!'>
+                        <div class='input-group-button'>
+                            <input type='submit' 
+                            class='btn btn-dark btn-lg btn-order' 
+                            value='Order'>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-{{!-- </div> --}}
+            </form>
+        </div>
+    </div>
+</div>
    

@@ -1,4 +1,4 @@
-// Import the ORM to create functions that will interact with the database.
+// Import ORM to create functions that will interact with the database.
 const orm = require('../config/orm.js');
 
 // Methods to call the orm functions using burger input for orm.

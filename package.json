@@ -1,7 +1,7 @@
 {
   "name": "thunder-burger-app",
   "version": "1.0.0",
-  "description": "Thunder Burger is a restaurant app that lets users input the names of burgers they'd like to eat!",
+  "description": "Thunder Burger is a restaurant app that lets users order the burgers they'd like to eat!",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

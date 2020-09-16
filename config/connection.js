@@ -1,9 +1,9 @@
-// Setup MySQL connection 
+// Setup MySQL dependency 
 const mysql = require('mysql');
 
 let connection;
 
-// Hooking connection with JawsDB MySQL add on from Heroku
+// Hooking connection with JawsDB MySQL add-on from Heroku
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
